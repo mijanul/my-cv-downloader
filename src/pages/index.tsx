@@ -1,3 +1,4 @@
+import SEO from "@/components/Seo";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -15,21 +16,24 @@ export default function Home() {
   }, []);
 
   return (
-    <main style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Preparing download...</h1>
-      <p>
-        If it doesn’t start automatically,{" "}
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            downloadCV();
-          }}
-        >
-          click here
-        </a>
-        .
-      </p>
-    </main>
+    <>
+      <SEO pageTitle={"CV download - Mijanul"} />
+      <main style={{ textAlign: "center", marginTop: "50px" }}>
+        <h1>Preparing download...</h1>
+        <p>
+          If it doesn’t start automatically,{" "}
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              downloadCV();
+            }}
+          >
+            click here
+          </a>
+          .
+        </p>
+      </main>
+    </>
   );
 }
