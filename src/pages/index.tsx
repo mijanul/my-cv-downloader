@@ -4,7 +4,7 @@ import { useEffect } from "react";
 export default function Home() {
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/cv.pdf";
+    link.href = "/SK Mijanul Haque_resume.pdf";
     link.download = "SK Mijanul Haque_resume.pdf"; // custom file name
     document.body.appendChild(link);
     link.click();
